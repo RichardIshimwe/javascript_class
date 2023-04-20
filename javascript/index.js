@@ -26,7 +26,7 @@ switch
 
 */
 
-console.log("star pattern");
+// console.log("star pattern");
 /*
 
 8
@@ -37,31 +37,31 @@ console.log("star pattern");
 
 */ 
 // looping:it is a must to have terminating point(number)
-let firstName = 'serge';
-let secondName = 'rudasingwa';
-let fullName = firstName + firstName;
-console.log("My name is:", fullName)
-let pattern = (n) =>{
-    for(let i = 1; i <= n;i++){
-        let prints = '';
-        for(let j = 1;j <= i;j++){//1.prints:'8',2.prints:'88',prints:''
-         prints = prints + '8';
-        }
-       console.log(prints);
-    }
-}
+// let firstName = 'serge';
+// let secondName = 'rudasingwa';
+// let fullName = firstName + firstName;
+// console.log("My name is:", fullName)
+// let pattern = (n) =>{
+//     for(let i = 1; i <= n;i++){
+//         let prints = '';
+//         for(let j = 1;j <= i;j++){//1.prints:'8',2.prints:'88',prints:''
+//          prints = prints + '8';
+//         }
+//        console.log(prints);
+//     }
+// }
 
-let conditions = (num) =>{
-if(false){
-    console.log("voted yes")
-}
-else if(num = 2){
-    console.log("voted nothing")
-}
+// let conditions = (num) =>{
+// if(false){
+//     console.log("voted yes")
+// }
+// else if(num = 2){
+//     console.log("voted nothing")
+// }
 // if(num === 0 || num === 6 || num == 7){
 //     console.log("voted no");
 // }
-}
+// }
 //confirm:1,11,9
 //reject:0,6,7
 // conditions(9);
@@ -100,23 +100,23 @@ delete the firt item
 arrayName.shift()
 */
 
-let arrayExample = [1,2,3,4,5,6,7,8]
-let index = 0;
+// let arrayExample = [1,2,3,4,5,6,7,8]
+// let index = 0;
 
-console.log("array Example" ,arrayExample);
-console.log("arrayLength", arrayExample.length);
-console.log(`the item on index ${arrayExample.length - 1}:`, arrayExample[arrayExample.length - 1]);
-for(let i = 0; i < arrayExample.length; i++){
-    console.log(arrayExample[i]*2)
-}
-arrayExample.push(9);
-console.log("new array:", arrayExample)
-arrayExample.pop()
-console.log("poped array:", arrayExample)
-arrayExample.shift();
-console.log("shift operation on array:", arrayExample);
-arrayExample.unshift(90);//append on the be...
-console.log("shift operation on array:", arrayExample);
+// console.log("array Example" ,arrayExample);
+// console.log("arrayLength", arrayExample.length);
+// console.log(`the item on index ${arrayExample.length - 1}:`, arrayExample[arrayExample.length - 1]);
+// for(let i = 0; i < arrayExample.length; i++){
+//     console.log(arrayExample[i]*2)
+// }
+// arrayExample.push(9);
+// console.log("new array:", arrayExample)
+// arrayExample.pop()
+// console.log("poped array:", arrayExample)
+// arrayExample.shift();
+// console.log("shift operation on array:", arrayExample);
+// arrayExample.unshift(90);//append on the be...
+// console.log("shift operation on array:", arrayExample);
 // pattern(2);
 /*
 1.iterate 5 times
@@ -127,23 +127,23 @@ access property in object
 objectName.property 
 
  */
-let userArray = [];
-let sergeDetails = {firstName:"serge",lastname:"rudasingwa",job:"system admin"};
-let richrdDetails = {firstName:"Richard",lastname:"Ishimwe",job:"engineer"};
-userArray.push(sergeDetails);
-userArray.push(richrdDetails)
-console.log("first name of serge",sergeDetails.firstName)
-console.log("all users:", userArray);
-let login = (user) =>{
- for(let i = 0; i < userArray.length; i++){
-    if(user === userArray[i].firstName){
-        return console.log("welcome to admin dashbord");
-    }
-    console.log("please do a signup");
- }
-}
+// let userArray = [];
+// let sergeDetails = {firstName:"serge",lastname:"rudasingwa",job:"system admin"};
+// let richrdDetails = {firstName:"Richard",lastname:"Ishimwe",job:"engineer"};
+// userArray.push(sergeDetails);
+// userArray.push(richrdDetails)
+// console.log("first name of serge",sergeDetails.firstName)
+// console.log("all users:", userArray);
+// let login = (user) =>{
+//  for(let i = 0; i < userArray.length; i++){
+//     if(user === userArray[i].firstName){
+//         return console.log("welcome to admin dashbord");
+//     }
+//     console.log("please do a signup");
+//  }
+// }
 
-login("Richard");
+// login("Richard");
 // assignment
 
 // nested if statement
@@ -161,3 +161,48 @@ an app which redirect someone according to his/her role
 3.customer page
 4.guest page
 */
+// let allArray = [[1,2,3,4,5,5],[]];
+
+// let allUsers = [{firtsName:"john", secondName:"ntwali", role:"admin"}, 
+//                 {firtsName:"king", secondName:"kale", role:"customer"},
+//                 {firtsName:"queen", secondName:"cse", role:"guest"}]
+
+// let sortAdmin = (array) =>{
+//     for(let i =0; i < array.length; i++){
+//     let adminExist = array[i].role;
+//     //console.log("adminexist:", adminExist);
+//     console.log("value:",i,"of adminExist", adminExist);
+//     if(adminExist === "guest"){
+//        console.log("guest is found to be:", array[i].firtsName);
+//     }
+//     }
+// }
+// sortAdmin(allUsers);
+
+// alert("hellooooo")
+let htmlButton = document.getElementById('btn');
+let htmlP = document.getElementById('paragraph');
+let paragraphTwo = document.querySelector('.down');
+let buttonTwo = document.querySelector('.dropDown');
+
+console.log("reading html button", htmlButton);
+/*
+addeventlistener params
+addEventListener(event, callbackFunction)
+*/
+htmlButton.addEventListener('click', () =>{
+    // window.alert("i am clicked");
+    console.log("i am clicked")
+    htmlP.innerHTML = "from submitted";
+});
+
+buttonTwo.addEventListener('click', () =>{
+    paragraphTwo.innerHTML = "class was selected successful";
+})
+
+/*
+1.increment and decrement a number with two different buttons.
+2.sort array of object and serch for a guest if a role of admin is found
+in the array.
+ */
+
