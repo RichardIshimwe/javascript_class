@@ -35,7 +35,7 @@ switch
 8888
 88888
 
-*/ 
+*/
 // looping:it is a must to have terminating point(number)
 // let firstName = 'serge';
 // let secondName = 'rudasingwa';
@@ -163,42 +163,60 @@ an app which redirect someone according to his/her role
 */
 // let allArray = [[1,2,3,4,5,5],[]];
 
-// let allUsers = [{firtsName:"john", secondName:"ntwali", role:"admin"}, 
-//                 {firtsName:"king", secondName:"kale", role:"customer"},
-//                 {firtsName:"queen", secondName:"cse", role:"guest"}]
+// let allUsers = [
+//   { firtsName: 'john', secondName: 'ntwali', role: 'user' },
+//   { firtsName: 'king', secondName: 'kale', role: 'customer' },
+//   { firtsName: 'queen', secondName: 'cse', role: 'guest' },
+//   { firtsName: 'serge', secondName: 'rudasingwa', role: 'admin' },
+// ];
+// // 1.2.
 
-// let sortAdmin = (array) =>{
-//     for(let i =0; i < array.length; i++){
+// let adminArray = [];
+
+// let sortAdmin = (array) => {
+//   for (let i = 0; i < array.length; i++) {
 //     let adminExist = array[i].role;
+//     if(adminExist === 'admin') {
+//      adminArray.push(array[i]);
+//      console.log("admin is found", array[i].firtsName);
+//      for( let j = 0; j < array.length; j++){
+//         let guestExist = array[j].role;
+//         if(guestExist === "guest"){
+//             return console.log("the guest is found");
+//         }
+//      }
+//     }
 //     //console.log("adminexist:", adminExist);
-//     console.log("value:",i,"of adminExist", adminExist);
-//     if(adminExist === "guest"){
-//        console.log("guest is found to be:", array[i].firtsName);
-//     }
-//     }
-// }
+//     // console.log("value:",i,"of adminExist", adminExist);
+//     // if(adminExist === "guest"){
+//     //   console.log("guest is found to be:", array[i].firtsName);
+//     // }
+//   }
+//   console.log("All admins are:", adminArray)
+// //   console.log("there is no adim in our array")
+// };
 // sortAdmin(allUsers);
 
 // alert("hellooooo")
-let htmlButton = document.getElementById('btn');
-let htmlP = document.getElementById('paragraph');
-let paragraphTwo = document.querySelector('.down');
-let buttonTwo = document.querySelector('.dropDown');
+// let htmlButton = document.getElementById('btn');
+// let htmlP = document.getElementById('paragraph');
+// let paragraphTwo = document.querySelector('.down');
+// let buttonTwo = document.querySelector('.dropDown');
 
-console.log("reading html button", htmlButton);
-/*
-addeventlistener params
-addEventListener(event, callbackFunction)
-*/
-htmlButton.addEventListener('click', () =>{
-    // window.alert("i am clicked");
-    console.log("i am clicked")
-    htmlP.innerHTML = "from submitted";
-});
+// console.log('reading html button', htmlButton);
+// /*
+// addeventlistener params
+// addEventListener(event, callbackFunction)
+// */
+// htmlButton.addEventListener('click', () => {
+//   // window.alert("i am clicked");
+//   console.log('i am clicked');
+//   htmlP.innerHTML = 'from submitted';
+// });
 
-buttonTwo.addEventListener('click', () =>{
-    paragraphTwo.innerHTML = "class was selected successful";
-})
+// buttonTwo.addEventListener('click', () => {
+//   paragraphTwo.innerHTML = 'class was selected successful';
+// });
 
 /*
 1.increment and decrement a number with two different buttons.
@@ -206,3 +224,43 @@ buttonTwo.addEventListener('click', () =>{
 in the array.
  */
 
+/*
+bookmark app
+1.storing app link(ex:google, facebook, youtube)
+
+a.figma
+b.html and css
+check student only if  a leader exist
+-find student and console.log his/her name
+-also display a message when a leader or student is not found
+*/
+
+let visitorsArray = [{name: "trey", age: 12, title: "student"},{name: "kalisa", age: 30, title: "leader"},{name: "brown", age: 12, title: "student"},{name: "white", age: 30, title: "ceo"},
+                     {name: "grey", age: 43, title: "teacher"},{name: "black", age: 31, title: "leader"},{name: "indigo", age: 2, title: "student"},{name: "kamariza", age: 70, title: "ceo"}]
+
+let checkVisitors = (array) =>{
+    
+ for( let h = 0;h < array.length; h++ ){
+    let checkLeader = array[h].title;
+    if(checkLeader === "leader")
+    {
+    // console.log("leader is found");
+    }
+ }
+
+}
+checkVisitors(visitorsArray);
+
+let checkUser = (array, age) =>{
+    for( let r = 0; r < array.length; r++){
+        let studentExist = array[r].title;
+        if(studentExist === "student"){
+            if(array[r].age === age){
+                console.log(`student with age:${age} exist`)
+            }
+            console.log("student is there")
+        }
+    }
+}
+
+checkUser(visitorsArray, 2);
