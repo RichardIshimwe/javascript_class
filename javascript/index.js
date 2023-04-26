@@ -235,32 +235,102 @@ check student only if  a leader exist
 -also display a message when a leader or student is not found
 */
 
-let visitorsArray = [{name: "trey", age: 12, title: "student"},{name: "kalisa", age: 30, title: "leader"},{name: "brown", age: 12, title: "student"},{name: "white", age: 30, title: "ceo"},
-                     {name: "grey", age: 43, title: "teacher"},{name: "black", age: 31, title: "leader"},{name: "indigo", age: 2, title: "student"},{name: "kamariza", age: 70, title: "ceo"}]
+// let visitorsArray = [{name: "trey", age: 12, title: "student"},{name: "kalisa", age: 30, title: "leader"},{name: "brown", age: 12, title: "student"},{name: "white", age: 30, title: "ceo"},
+//                      {name: "grey", age: 43, title: "teacher"},{name: "black", age: 31, title: "leader"},{name: "indigo", age: 2, title: "student"},{name: "kamariza", age: 70, title: "ceo"}]
 
-let checkVisitors = (array) =>{
-    
- for( let h = 0;h < array.length; h++ ){
-    let checkLeader = array[h].title;
-    if(checkLeader === "leader")
-    {
-    // console.log("leader is found");
-    }
- }
+// let checkVisitors = (array) =>{
 
-}
-checkVisitors(visitorsArray);
+//  for( let h = 0;h < array.length; h++ ){
+//     let checkLeader = array[h].title;
+//     if(checkLeader === "leader")
+//     {
+//     // console.log("leader is found");
+//     }
+//  }
 
-let checkUser = (array, age) =>{
-    for( let r = 0; r < array.length; r++){
-        let studentExist = array[r].title;
-        if(studentExist === "student"){
-            if(array[r].age === age){
-                console.log(`student with age:${age} exist`)
-            }
-            console.log("student is there")
-        }
-    }
-}
+// }
+// checkVisitors(visitorsArray);
 
-checkUser(visitorsArray, 2);
+// let checkUser = (array, age) =>{
+//     for( let r = 0; r < array.length; r++){
+//         let studentExist = array[r].title;
+//         if(studentExist === "student"){
+//             if(array[r].age === age){
+//                 console.log(`student with age:${age} exist`)
+//             }
+//             console.log("student is there")
+//         }
+//     }
+// }
+
+// checkUser(visitorsArray, 2);
+
+// let array2 = [1,2]
+// let arrayNumber = [12,32,3,4,2,2,4,2,5,5,56];
+
+// let addNummbers = (array) =>{
+//     let result = 0;
+//    for( let i = 0; i < array.length; i++){
+//      result = result + array[i];
+//    }
+//    console.log(`the sum of${array} is: ${result}`)
+// }
+
+// addNummbers(array2);
+
+// let emailField = document.getElementById("email");
+// let passwordField = document.getElementById("password");
+// let button = document.getElementById("button");
+
+// button.addEventListener('click', (e) =>{
+//     e.preventDefault();
+//     console.log("email:", emailField.value);
+//     console.log("password:", passwordField.value);
+//     if(emailField.value != "ishimwerichard26@gmail.com"){
+//         return console.log(`${emailField.value} you are not authorized`);
+//     }
+//     console.log(`${emailField.value} you are welcome`);
+// });
+
+// let arrayString = ["12345678901234567890", "dsgj", "djnsk", "dn", "fdnsjkgn", "nsdfjkgn", "onrtkdsgmkr"];
+
+// let checkLongest = (array) =>{
+//     let large = 0;
+//     for( let i = 0; i < array.length; i++){
+//         if(array[i].length > large){
+//             large = array[i].length;
+//         }
+//     }
+//     console.log(large)
+// }
+// checkLongest(arrayString);
+
+// sum of array
+
+let array = [3, 344, 34, 3, 54, 5, 4, 3, 2, 23, 34, 1];
+
+// let sum = (anyArray) => {
+//   let result = 0;
+//   for (let i = 0; i < anyArray.length; i++) {
+//     result = result + anyArray[i];
+//   }
+//   console.log('sum:', result);
+// };
+// sum(array);
+
+// localstorage
+// localStorage.setItem("key",value);
+localStorage.setItem("myArray", JSON.stringify(array));
+let getArray = JSON.parse(localStorage.getItem("myArray"));
+console.log(getArray[2]);
+// localStorage.setItem("number", 123455544);
+// let getItem = localStorage.getItem("number");
+// console.log("item from localstorage:", getItem)
+
+/*
+login page
+  *******
+1.if user login and he/she is not in our database you 
+have to sign him/her in.
+2.if the user exist alert that the user already exist
+*/
