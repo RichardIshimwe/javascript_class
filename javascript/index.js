@@ -306,8 +306,24 @@ check student only if  a leader exist
 // checkLongest(arrayString);
 
 // sum of array
+// higher order functions
+// map,filter
 
-let array = [3, 344, 34, 3, 54, 5, 4, 3, 2, 23, 34, 1];
+let array = [3, 344, 34, 3, 54, 5, 4, 3, 2, 23, 34, 1,4];
+
+// sprid operator 
+let newArray = [...array,76,54,4,34,3,43,4]//[3, 344, 34, 3, 54, 5, 4, 3, 2, 23, 34, 1]
+console.log("new Array:", newArray);
+// let filteredArray = array.filter((items) => items === 1);
+// if(filteredArray[0]){
+//   console.log("item exist");
+// }else{
+//   console.log("no item");
+// }
+// tenary operator
+// filteredArray[0] ? console.log("the element exist") : console.log("no element");
+// console.log("array:", filteredArray);
+// console.log("this is array",array);
 
 // let sum = (anyArray) => {
 //   let result = 0;
@@ -320,9 +336,9 @@ let array = [3, 344, 34, 3, 54, 5, 4, 3, 2, 23, 34, 1];
 
 // localstorage
 // localStorage.setItem("key",value);
-localStorage.setItem("myArray", JSON.stringify(array));
-let getArray = JSON.parse(localStorage.getItem("myArray"));
-console.log(getArray[2]);
+// localStorage.setItem("myArray", JSON.stringify(array));
+// let getArray = JSON.parse(localStorage.getItem("myArray"));
+// console.log(getArray[2]);
 // localStorage.setItem("number", 123455544);
 // let getItem = localStorage.getItem("number");
 // console.log("item from localstorage:", getItem)
@@ -333,5 +349,26 @@ login page
 1.if user login and he/she is not in our database you 
 have to sign him/her in.
 2.if the user exist alert that the user already exist
-*/
+// */
+let education = document.querySelector('.education');
+let ent = document.querySelector('.ent');
+let person = document.getElementById('person');
+let category = document.getElementById('category');
+let button = document.getElementById('button');
+
+button.addEventListener('click', (e) => {
+  // alert(person.value);
+ e.preventDefault();
+  if(category.value === "education"){
+    let paragraph = document.createElement('p');
+    paragraph.innerHTML = person.value;
+    education.appendChild(paragraph);
+  }
+  if(category.value === "ent"){
+    let paragraph = document.createElement('p');
+    paragraph.innerHTML = person.value;
+    ent.appendChild(paragraph);
+  }
+})
+
 
