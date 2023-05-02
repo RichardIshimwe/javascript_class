@@ -309,11 +309,11 @@ check student only if  a leader exist
 // higher order functions
 // map,filter
 
-let array = [3, 344, 34, 3, 54, 5, 4, 3, 2, 23, 34, 1,4];
+// let array = [3, 344, 34, 3, 54, 5, 4, 3, 2, 23, 34, 1,4];
 
 // sprid operator 
-let newArray = [...array,76,54,4,34,3,43,4]//[3, 344, 34, 3, 54, 5, 4, 3, 2, 23, 34, 1]
-console.log("new Array:", newArray);
+// let newArray = [...array,76,54,4,34,3,43,4]//[3, 344, 34, 3, 54, 5, 4, 3, 2, 23, 34, 1]
+// console.log("new Array:", newArray);
 // let filteredArray = array.filter((items) => items === 1);
 // if(filteredArray[0]){
 //   console.log("item exist");
@@ -350,25 +350,41 @@ login page
 have to sign him/her in.
 2.if the user exist alert that the user already exist
 // */
-let education = document.querySelector('.education');
-let ent = document.querySelector('.ent');
-let person = document.getElementById('person');
-let category = document.getElementById('category');
-let button = document.getElementById('button');
+// let education = document.querySelector('.education');
+// let ent = document.querySelector('.ent');
+// let person = document.getElementById('person');
+// let category = document.getElementById('category');
+// let button = document.getElementById('button');
 
-button.addEventListener('click', (e) => {
-  // alert(person.value);
- e.preventDefault();
-  if(category.value === "education"){
-    let paragraph = document.createElement('p');
-    paragraph.innerHTML = person.value;
-    education.appendChild(paragraph);
-  }
-  if(category.value === "ent"){
-    let paragraph = document.createElement('p');
-    paragraph.innerHTML = person.value;
-    ent.appendChild(paragraph);
-  }
-})
+// button.addEventListener('click', (e) => {
+//   // alert(person.value);
+//  e.preventDefault();
+//   if(category.value === "education"){
+//     let paragraph = document.createElement('p');
+//     paragraph.innerHTML = person.value;
+//     education.appendChild(paragraph);
+//   }
+//   if(category.value === "ent"){
+//     let paragraph = document.createElement('p');
+//     paragraph.innerHTML = person.value;
+//     ent.appendChild(paragraph);
+//   }
+// })
+// http requests
+/*
+crud(create read update delete)
+-GET  : geting data from API(application program interface)
+-POST : sending data
+-DELETE : delete items
+-PATCH/PUT : updating data
+*/
+/* 
+statusCode:
+404:page not found/unauthorized
+500:internal server error
+200:ok
+201:found
+*/
+
 
 
